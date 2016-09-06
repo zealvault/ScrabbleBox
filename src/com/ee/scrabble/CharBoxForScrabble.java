@@ -35,12 +35,12 @@ public class CharBoxForScrabble {
             throw new IllegalArgumentException("Request fewer than "+this.boxOfChars.size());
         }
         Random randomObject = new Random();
-        int numberOfCharsInResultantCharArray = 0;
-        while (numberOfCharsInResultantCharArray < requestedNumberOfChars) {
+        int numberOfCharsinResultantList = 0;
+        while (numberOfCharsinResultantList < requestedNumberOfChars) {
             int randomNumber = randomObject.nextInt(this.boxOfChars.size());
             resultantListOfChars.add(this.boxOfChars.get(randomNumber));
             removeCharFromBox(randomNumber);
-            numberOfCharsInResultantCharArray++;
+            numberOfCharsinResultantList++;
         }
         return resultantListOfChars;
     }
