@@ -27,6 +27,9 @@ public class Scrabble {
             if(onlyInstanceOfScrabble ==null){
                 onlyInstanceOfScrabble = new Scrabble();
             }
+            if(numberOfChars <= 0){
+                throw new IllegalArgumentException("Bad Request:Request for valid number of Characters");
+            }
             onlyInstanceOfScrabble.characterList = new LinkedList<>();
             onlyInstanceOfScrabble.characterList = onlyInstanceOfScrabble.charBox.getStreamOfCharsToPlay(numberOfChars);
 
